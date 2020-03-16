@@ -137,7 +137,7 @@ export function QueryEditor(props: QueryEditorProps) {
         schema,
         renderDescription: (text: string) => md.render(text),
         onClick: (reference: GraphQLType) =>
-          props.onClickReference && props.onClickReference(reference),
+          props.onClickReference?.(reference),
       },
       jump: {
         schema,
